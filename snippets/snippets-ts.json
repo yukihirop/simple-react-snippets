@@ -11,131 +11,10 @@
     "description": "Import React and"
   },
 
-  "Import React and Component": {
-    "prefix": "imrc",
-    "body": [
-      "import * as React from 'react';",
-      "import { Component } from 'react';\n"
-    ],
-    "description": "Import React, { Component }"
-  },
-
   "Import ReactDOM": {
     "prefix": "imrd",
     "body": ["import ReactDOM from 'react-dom';"],
     "description": "Import ReactDOM"
-  },
-
-  "Import React, { useState }": {
-    "prefix": "imrs",
-    "body": [
-      "import * as React from 'react';",
-      "import { useState } from 'react';\n"
-    ],
-    "description": "Import React, { useState }"
-  },
-
-  "Import React, { useState, useEffect }": {
-    "prefix": "imrse",
-    "body": [
-      "import * as React from 'react';",
-      "import { useState, useEffect } from 'react';\n"
-    ],
-    "description": "Import React, { useState, useEffect }"
-  },
-
-  "Import Pure Component": {
-    "prefix": "impc",
-    "body": ["import React, { PureComponent } from 'react';\n"],
-    "description": "Import React, { PureComponent }"
-  },
-
-  "Class Component": {
-    "prefix": "cc",
-    "body": [
-      "interface $1Props {",
-      "\t$2",
-      "}",
-      " ",
-      "interface $1State {",
-      "\t$3",
-      "}",
-      " ",
-      "class $1 extends React.Component<$1Props, $1State> {",
-      "\tstate = { $4: $5 }",
-      "\trender() { ",
-      "\t\treturn ( $0 );",
-      "\t}",
-      "}",
-      " ",
-      "export default $1;"
-    ],
-    "description": "Class Component"
-  },
-
-  "Class Pure Component": {
-    "prefix": "cpc",
-    "body": [
-      "export interface $1Props {",
-      "\t$2",
-      "}",
-      " ",
-      "export interface $1State {",
-      "\t$3",
-      "}",
-      " ",
-      "class $1 extends React.PureComponent<$1Props, $1State> {",
-      "\tstate = { $4: $5 }",
-      "\trender() { ",
-      "\t\treturn ( $0 );",
-      "\t}",
-      "}",
-      " ",
-      "export default $1;"
-    ],
-    "description": "Class Pure Component"
-  },
-
-  "Class Component Constructor": {
-    "prefix": "ccc",
-    "body": [
-      "interface $1Props {",
-      "\t$2",
-      "}",
-      " ",
-      "interface $1State {",
-      "\t$3",
-      "}",
-      " ",
-      "class $1 extends React.Component<$1Props, $1State> {",
-      "\tconstructor(props: $1Props) {",
-      "\t\tsuper(props);",
-      "\t\tthis.state = { $4: $5 };",
-      "\t}",
-      "\trender() { ",
-      "\t\treturn ( $0 );",
-      "\t}",
-      "}",
-      " ",
-      "export default $1;"
-    ],
-    "description": "Class Component with Constructor"
-  },
-
-  "Function Component": {
-    "prefix": "fc",
-    "body": [
-      "interface $1Props {",
-      "\t$2",
-      "}",
-      " ",
-      "const $1: FunctionComponent<$1Props> = ($3) => {",
-      "\treturn ( $0 );",
-      "}",
-      " ",
-      "export default $1;"
-    ],
-    "description": "Function Component"
   },
 
   "Latest Function Component": {
@@ -143,14 +22,14 @@
     "body": [
       "interface $1Props {",
       "\ttitle: string",
-      "}",
+      "}\n",
       "const $1 = (props: $1Props) => {",
-      "\tconst [title, setTitle] = useState<$1Props['title']>('')",
+      "\tconst [title, setTitle] = useState<$1Props['title']>('')\n",
       "\treturn (",
       "\t\t<>",
       "\t\t</>",
       "\t)",
-      "};",
+      "}\n",
       "export default $1;"
     ],
     "description": "Latest Function Component"
@@ -180,12 +59,6 @@
     "description": "Stateless Function Component"
   },
 
-  "componentDidMount": {
-    "prefix": "cdm",
-    "body": ["componentDidMount() {", "\t$0", "}"],
-    "description": "componentDidMount"
-  },
-
   "useEffect": {
     "prefix": "uef",
     "body": ["useEffect(() => {", "\t$1", "}, []);"],
@@ -203,17 +76,6 @@
     "description": "componentWillMount"
   },
 
-  "componentWillReceiveProps": {
-    "prefix": "cwrp",
-    "body": [
-      "//WARNING! To be deprecated in React v17. Use new lifecycle static getDerivedStateFromProps instead.",
-      "componentWillReceiveProps(nextProps: $1Props) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "componentWillReceiveProps"
-  },
-
   "getDerivedStateFromProps": {
     "prefix": "gds",
     "body": [
@@ -222,49 +84,6 @@
       "}"
     ],
     "description": "getDerivedStateFromProps"
-  },
-
-  "shouldComponentUpdate": {
-    "prefix": "scu",
-    "body": [
-      "shouldComponentUpdate(nextProps: $1Props, nextState: $1State) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "shouldComponentUpdate"
-  },
-
-  "componentWillUpdate": {
-    "prefix": "cwu",
-    "body": [
-      "//WARNING! To be deprecated in React v17. Use componentDidUpdate instead.",
-      "componentWillUpdate(nextProps: $1Props, nextState: $1State) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "componentWillUpdate"
-  },
-
-  "componentDidUpdate": {
-    "prefix": "cdu",
-    "body": [
-      "componentDidUpdate(prevProps: $1Props, prevState: $1State) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "componentDidUpdate"
-  },
-
-  "componentWillUnmount": {
-    "prefix": "cwun",
-    "body": ["componentWillUnmount() {", "\t$0", "}"],
-    "description": "componentWillUnmount"
-  },
-
-  "componentDidCatch": {
-    "prefix": "cdc",
-    "body": ["componentDidCatch(error, info) {", "\t$0", "}"],
-    "description": "componentDidCatch"
   },
 
   "getSnapshotBeforeUpdate": {
@@ -283,16 +102,6 @@
     "description": "setState"
   },
 
-  "Functional setState": {
-    "prefix": "ssf",
-    "body": [
-      "this.setState(prevState => {",
-      "\treturn { $1: prevState.$1 };",
-      "});"
-    ],
-    "description": "Functional setState"
-  },
-
   "Declare a new state variable using State Hook": {
     "prefix": "usf",
     "body": ["const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);"],
@@ -305,50 +114,27 @@
     "description": "render"
   },
 
-  "Render Prop": {
-    "prefix": "rprop",
-    "body": [
-      "interface $1Props {",
-      "\trender: (state: $1State) => JSX.Element",
-      "}",
-      " ",
-      "interface $1State {",
-      "\t$2",
-      "}",
-      " ",
-      "class $1 extends React.Component<$1Props, $1State> {",
-      "\tstate = { $3: $4 }",
-      "\trender() { ",
-      "\t\treturn this.props.render(this.state);",
-      "\t}",
-      "}",
-      " ",
-      "export default $1;"
-    ],
-    "description": "Render Prop"
-  },
-
   "Emotion Starter": {
     "prefix": "emo",
     "body": [
       "import React, { useState } from 'react'",
       "import styled from '@emotion/styled'",
-      "import { css } from '@emotion/react'",
+      "import { css } from '@emotion/react'\n",
       "const $1Container = styled.div`",
       "\twidth: 100%;",
       "\theight: 100%;",
-      "`;",
+      "`\n",
       "interface $1Props {",
       "\ttitle: string",
-      "}",
+      "}\n",
       "const $1 = (props: $1Props) => {",
-      "\tconst [title, setTitle] = useState<$1Props['title']>('')",
+      "\tconst [title, setTitle] = useState<$1Props['title']>('')\n",
       "\treturn (",
       "\t\t<$1Container>",
       "\t\t</$1Container>",
       "\t)",
-      "};",
-      "export default $1",
+      "}\n",
+      "export default $1\n",
       "const active = css`",
       "\tbackground: red;",
       "`"

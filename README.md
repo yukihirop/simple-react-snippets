@@ -4,6 +4,13 @@ The essential collection of React Snippets and commands.
 
 ![snippets in action](images/snippets-in-action.gif)
 
+## Install local plugin
+
+```bash
+vsce package --no-yarn
+code --install-extension simple-react-snippets-1.2.7.vsix
+```
+
 ## Features
 
 Only what you need and nothing more. **No Redux. No React Native.**

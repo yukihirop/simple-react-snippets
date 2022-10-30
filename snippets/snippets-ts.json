@@ -333,7 +333,7 @@
     "body": [
       "import React, { useState } from 'react'",
       "import styled from '@emotion/styled'",
-      "import { css } from '@emotion/core'",
+      "import { css } from '@emotion/react'",
       "const $1Container = styled.div`",
       "\twidth: 100%;",
       "\theight: 100%;",
